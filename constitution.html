@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constitution - ICP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding-top: 80px;
+        }
+
+        .navbar {
+            background-color: #000000;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: #ff0000;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff0000;
+        }
+
+        .constitution {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .constitution h1 {
+            color: #ff0000;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .constitution-section {
+            margin-bottom: 3rem;
+        }
+
+        .constitution-section h2 {
+            color: #ff0000;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #ff0000;
+            padding-bottom: 0.5rem;
+        }
+
+        .constitution-section p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .constitution-section ul {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .constitution-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #000000;
+                flex-direction: column;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .constitution {
+                padding: 1rem;
+            }
+
+            .constitution h1 {
+                font-size: 2rem;
+            }
+
+            .constitution-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo"><a href="index.html">☭ Indian Communist Party (ICP)</a></div>
+                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="party.html">Party Structure</a></li>
+                    <li><a href="constitution.html">Our Constitution</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="constitution">
+        <h1>Constitution of the Indian Communist Party</h1>
+        
+        <div class="constitution-section">
+            <h2>Article I: Fundamental Principles</h2>
+            <p>The Indian Communist Party (ICP) is founded on the principles of socialism, democracy, and the empowerment of the working class. We strive to establish a society based on economic equality, social justice, and collective ownership of the means of production.</p>
+        </div>
+
+        <div class="constitution-section">
+            <h2>Article II: Aim</h2>
+            <p>The Indian Communist Party is the revolutionary vanguard of the working class of India. Its aim is socialism and communism through the establishment of the state of dictatorship of the proletariat. In all its activities, the Party is guided by the philosophy and principles of Marxism-Leninism, which show to the toiling masses the correct way to ending the exploitation of man by man and their complete emancipation. The Party keeps high the banner of proletarian internationalism. </p>
+        </div>
+
+
+        <div class="constitution-section">
+            <h2>Article III: Objectives</h2>
+            <p>The primary objectives of the Indian Communist Party are:</p>
+            <ul>
+                <li>To establish a socialist society through a revolution.</li>
+                <li>To protect and advance the rights and interests of workers, farmers, and all marginalized sections of society.</li>
+                <li>To improve the living and working conditions of farmers, laborers, and other underprivileged groups.</li>
+                <li>To establish a government based on the principles of the dictatorship of the proletariat, ensuring worker's and peasant's leadership in governance.</li>
+                <li>To fight against social injustices such as casteism, communalism, gender discrimination, and other forms of oppression.</li>
+                <li>To work towards a peaceful, equitable, and progressive society free from poverty, illiteracy, and social disparities.</li>
+            </ul>
+        </div>
+
+        <div class="constitution-section">
+            <h2>Article IV: Membership</h2>
+            <p>Membership in the ICP is open to all individuals who:</p>
+            <ul>
+                <li>Accept and adhere to the party's program and constitution.</li>
+                <li>Are 18 years of age or older.</li>
+                <li>Pay regular membership dues.</li>
+                <li>Actively participate in a party decision-making.</li>
+                <li>Have not been convicted of any serious criminal offense.</li>
+            </ul>
+        </div>
+
+        <div class="constitution-section">
+            <h2>Article V: Party Structure</h2>
+            <p>The ICP operates on the principle of democratic centralism with the following organizational structure:</p>
+            <ul>
+                <li>Central Committee: The highest decision-making body responsible for formulating policies, programs, and strategies.</li>
+                <li>Politburo: The executive body of the Central Committee, responsible for implementing policies and making decisions in emergencies.</li>
+                <li>General Secretary: The head of the party, responsible for overall leadership and coordination of party activities.</li>
+                <li>State Committee and State Secretary: Formulates state-level strategies, coordinates district committees, and implements policies of the Central Committee.</li>
+                <li>District Committee and District Secretary: Organizes and oversees party activities within the district, recruiting members and addressing local issues.</li>
+                <li>Local Committees and Local Secretary: Operates at the grassroots level, directly engaging with the public and addressing local concerns.</li>
+            </ul>
+        </div>
+
+        <div class="constitution-section">
+            <h2>Article VI: Party Pledge</h2>
+            <p>Every person joining the Party shall sign the Party Pledge. This Pledge shall be:</p>
+            <ul>
+                <li>“I accept the aims and objectives of the Party and agree to abide by its Constitution and loyally to carry out decisions of the Party.</li>
+                <li>“I shall strive to live up to the ideals of communism and shall selflessly serve the working class and the toiling masses and the country, always placing the interests of the Party and the people above personal interests.”</li>
+            </ul>
+        </div>
+
+        <div class="constitution-section">
+            <h2>Article VII: Duties of Party Members</h2>
+            <p>The duties of the Party members are as follows:</p>
+            <ul>
+                <li>Study and propagate the principles of Marxism-Leninism.</li>
+                <li>Actively engage in party programs, campaigns, and mass movements.</li>
+                <li>Educate the masses about the party's policies and the benefits of socialism.</li>
+                <li>Work selflessly for the welfare of the working class, peasants, and marginalized communities.</li>
+                <li>Contribute to the party’s funds regularly, based on their capacity.</li>
+                <li>Maintain honesty, integrity, and a high standard of personal conduct.</li>
+                <li>Promote the principle of proletarian internationalism by supporting working-class movements worldwide.</li>
+            </ul>
+        </div>
+
+        <div class="constitution-section">
+            <h2>Article VIII: Policies for India at national level</h2>
+            <p>The party plans to make India self sustainable and a world super power based on communist and socialist beliefs. The plans to be implemented are as follows:</p>
+            <ul>
+                <li>Abolish GST for Essential Goods: Remove GST on essential commodities like food and medicines to reduce the cost of living.</li>
+                <li>National Language Policy: Make English the national medium for administration and higher education while preserving and promoting regional languages.</li>
+                <li>Skill-Based Curriculum: Revamp school and college syllabi to include mandatory skill-based and vocational training with a focus on imparting socialist and scientific thinking.</li>
+                <li>National Scholarship Program: Provide scholarships for students excelling in academics, sports, and arts.</li>
+                <li>Universal Healthcare System: Introduce free healthcare for all citizens in government hospitals, covering all essential treatments and medicines.</li>
+                <li>Collective Farming Initiatives: Promote cooperative farming models where land and resources are managed collectively, with state support for technology and infrastructure.</li>
+                <li>State-Funded Infrastructure Projects: Develop and maintain public infrastructure such as roads, bridges, transportation, and communication networks using state funds</li>
+                <li>State-Guaranteed Employment: Introduce state employment programs that provide job opportunities to all citizens through government initiatives and infrastructure projects.</li>
+                <li>Skill Development for the Masses: Expand vocational and skill training programs to ensure every citizen has the opportunity to learn new trades and improve employability.</li>
+                <li>Focus on Women’s Empowerment: Enforce policies to guarantee women’s rights, access to education, employment, and legal protection against exploitation and violence.</li>
+                <li>State-Directed Technology Development: Promote state-sponsored research and innovation in technology that serves public welfare, such as healthcare, agriculture, and renewable energy.</li>
+                <li>National Defense Development: Strengthen and modernize the defense sector under state control, with a focus on self-reliance and reducing foreign arms dependency.</li>
+                <li>Border Security Modernization: Invest in border infrastructure and surveillance systems to ensure the security of India’s frontiers.</li>
+                <li>Military as a People’s Army: Emphasize the integration of civilians into defense roles by creating opportunities for youth to engage in national service through community defense programs and citizen military training.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Indian Communist Party - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

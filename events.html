@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Indian Communist Party</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding-top: 80px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: #000000;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: #ff0000;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff0000;
+        }
+
+        .events-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex: 1;
+        }
+
+        .events-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .events-header h1 {
+            color: #ff0000;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .events-section {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .events-section h2 {
+            color: #ff0000;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .event-card {
+            background-color: #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .event-image {
+            width: 100%;
+            height: 200px;
+            background-color: #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+
+        .event-details {
+            padding: 1.5rem;
+        }
+
+        .event-date {
+            color: #ff0000;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .event-location {
+            color: #cccccc;
+            margin-bottom: 1rem;
+        }
+
+        .event-description {
+            color: #999999;
+            margin-bottom: 1rem;
+        }
+
+        .event-button {
+            display: inline-block;
+            background-color: #ff0000;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .event-button:hover {
+            background-color: #cc0000;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #000000;
+                flex-direction: column;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .events-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo"><a href="index.html">☭ Indian Communist Party (ICP)</a></div>
+                <div class="menu-toggle">☰</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="party.html">Party Structure</a></li>
+                    <li><a href="constitution.html">Our Constitution</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="events-container">
+        <div class="events-header">
+            <h1>Party Events</h1>
+        </div>
+
+        <section class="events-section">
+            <h2>Upcoming Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-image">Event Image Placeholder</div>
+                    <div class="event-details">
+                        <div class="event-date">January 26, 2025</div>
+                        <h3 class="event-title">Preparations for Establishment of Indian Red Army</h3>
+                        <p class="event-location">Kolkata,India</p>
+                        <p class="event-description">Republic Day Celebration and formulating plans for improving the military infrastructure.</p>
+                        <a href="#" class="event-button">View Highlights</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">Event Image Placeholder</div>
+                    <div class="event-details">
+                        <div class="event-date">January 22, 2025</div>
+                        <h3 class="event-title">Monthly Updates in the ICP website</h3>
+                        <p class="event-location">Online</p>
+                        <p class="event-description">Some small updates to be made in the ICP website.</p>
+                        <a href="#" class="event-button">View Highlights</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="events-section">
+            <h2>Past Events</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-image">Event Image Placeholder</div>
+                    <div class="event-details">
+                        <div class="event-date">January 15, 2025</div>
+                        <h3 class="event-title">Launch of ICP website</h3>
+                        <p class="event-location">Online</p>
+                        <p class="event-description">Review of website and discussion of party constitution.</p>
+                        <a href="about.html" class="event-button">View Highlights</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-image">Event Image Placeholder</div>
+                    <div class="event-details">
+                        <div class="event-date">January 15, 2025</div>
+                        <h3 class="event-title">Comrade Rohan Dutta forms ICP</h3>
+                        <p class="event-location">Kolkata,India</p>
+                        <p class="event-description">Formation of Indian Communist Party</p>
+                        <a href="about.html" class="event-button">View Highlights</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Indian Communist Party - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

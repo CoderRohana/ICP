@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Indian Communist Party</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding-top: 80px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            background-color: #000000;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: #ff0000;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff0000;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            flex: 1;
+        }
+
+        .about-section {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .about-section h2 {
+            color: #ff0000;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+
+        .about-section p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .value-card {
+            background-color: #333;
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .value-card h3 {
+            color: #ff0000;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #000000;
+                flex-direction: column;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .about-section {
+                padding: 1.5rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo"><a href="index.html">☭ Indian Communist Party (ICP)</a></div>
+                <div class="menu-toggle">☰</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="party.html">Party Structure</a></li>
+                    <li><a href="constitution.html">Our Constitution</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="about-container">
+        <section class="about-section">
+            <h2>Our History</h2>
+            <p>The Indian Communist Party (ICP) was established with the vision of creating a more equitable and just society in India. Our journey began with the mission to represent the working class and advocate for their rights and interests.</p>
+            <p>Founded on 15th January, 2024, ICP aims to revolutionize the communist party of India and make a more strong enough party to compete against other right wing parties of India.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Our Mission</h2>
+            <p>The ICP is committed to building a socialist society based on the principles of equality, justice, and collective prosperity. We strive to eliminate exploitation in all its forms and ensure that the fruits of economic development reach every citizen.</p>
+            <p>Our mission includes fighting against economic inequality, social discrimination, and political oppression while promoting democratic values and secular principles in Indian society.</p>
+        </section>
+
+        <section class="about-section">
+            <h2>Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3>Economic Justice</h3>
+                    <p>Working towards fair distribution of resources and economic opportunities for all citizens</p>
+                </div>
+                <div class="value-card">
+                    <h3>Social Equality</h3>
+                    <p>Fighting against all forms of discrimination and promoting inclusive social development</p>
+                </div>
+                <div class="value-card">
+                    <h3>Worker's Rights</h3>
+                    <p>Protecting and advancing the rights and interests of the working class</p>
+                </div>
+                <div class="value-card">
+                    <h3>Marxism–Leninism</h3>
+                    <p>Strength through unity, guided by Marxist-Leninist principles, to defend the revolution and uphold the sovereignty of the proletariat.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Indian Communist Party - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

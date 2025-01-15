@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICP</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .navbar {
+            background-color: #000000;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: #ff0000;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ff0000;
+        }
+
+        .welcome-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('image1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .welcome-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #ff0000;
+        }
+
+        .welcome-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: #ff0000;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #cc0000;
+        }
+
+        .section-title {
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .about-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .links-section {
+            padding: 4rem 2rem;
+            background-color: #241010;
+        }
+
+        .important-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .link-card {
+            background-color: black;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .link-card a {
+            color: #ff0000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: black ;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #000000;
+                flex-direction: column;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .welcome-content h1 {
+                font-size: 2rem;
+            }
+
+            .welcome-content p {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo"><a href="index.html">☭ Indian Communist Party (ICP)</a></div>
+                <div class="menu-toggle">☰</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="party.html">Party Structure</a></li>
+                    <li><a href="constitution.html">Our Constitution</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="welcome-section">
+        <div class="welcome-content">
+            <h1>Welcome to the ICP</h1>
+            <p>Join us in building a better and equal future</p>
+            <a href="about.html" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <h2 class="section-title">About ICP</h2>
+        <p>Indian Communist Party is a progressive communist party committed to democratic values and social equality. We believe in creating positive change through a revolution and for that we want to inspire the younger generation. Our party focuses on economic and social equality, sustainable development and the collective ownership of resources to ensure that wealth and power are distributed equitably among all members of society, fostering a classless and cooperative community.</p>
+    </section>
+
+    <section class="links-section">
+        <h2 class="section-title">Important Links</h2>
+        <div class="important-links">
+            <div class="link-card">
+                <a href="membership.html">Become a Member</a>
+            </div>
+            <div class="link-card">
+                <a href="events.html">Upcoming Events</a>
+            </div>
+            <div class="link-card">
+                <a href="volunteer.html">Volunteer</a>
+            </div>
+            <div class="link-card">
+                <a href="donate.html">Support Our Cause</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Indian Communist Party - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
